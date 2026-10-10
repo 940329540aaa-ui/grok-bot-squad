@@ -1,0 +1,52 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>一个人 + 5 个 AI Bot | Grok Bot 多智能体协作实践</title>
+<meta name="description" content="Frank 用 Grok Bot 搭建的 5 人 AI 团队：单一入口、职责卡、Bot 直接同步、人在关键节点拍板。">
+<style>
+:root{--bg:#0b1020;--card:#141b33;--txt:#e7ecf7;--mut:#9aa7c7;--acc:#4f8cff;--acc2:#a66bff}
+*{box-sizing:border-box}body{margin:0;font-family:-apple-system,"PingFang SC","Noto Sans CJK SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--txt);line-height:1.7}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+header{padding:72px 0 48px;text-align:center;background:radial-gradient(circle at 50% 0,#1f2d5c 0,transparent 70%)}
+.tag{display:inline-block;padding:4px 14px;border:1px solid #2c3a66;border-radius:99px;color:var(--mut);font-size:14px}
+h1{font-size:clamp(30px,6vw,52px);margin:18px 0 10px;line-height:1.25;background:linear-gradient(90deg,var(--acc),var(--acc2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{color:var(--mut);font-size:18px;max-width:640px;margin:0 auto}
+.btn{display:inline-block;margin:26px 8px 0;padding:12px 26px;border-radius:12px;background:var(--acc);color:#fff;text-decoration:none;font-weight:600}.btn.g{background:transparent;border:1px solid #2c3a66}
+h2{font-size:26px;margin:56px 0 18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid #222c4f;border-radius:16px;padding:20px}
+.card h3{margin:0 0 6px;font-size:18px}.card p{margin:0;color:var(--mut);font-size:15px}
+.arch{background:#fff;border-radius:16px;padding:10px}.arch img{width:100%;display:block}
+.stats{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-top:36px}
+.stat{min-width:120px}.stat b{display:block;font-size:30px;color:var(--acc)}.stat span{color:var(--mut);font-size:14px}
+ol{padding-left:20px}li{margin:4px 0}.sig{color:#7ee2a8}
+footer{text-align:center;color:var(--mut);padding:56px 0;font-size:14px}a{color:var(--acc)}
+</style></head><body>
+<header><div class="wrap"><span class="tag">⚡ Built with Grok Bot · Day 1 实践记录</span>
+<h1>一个人 + 5 个 AI Bot</h1>
+<p class="sub">我只跟一个「总管」说话。找资讯、研究玩法、做调研、陪我学习，由 Bot 们自己派活、自己同步、自己交付。</p>
+<a class="btn" href="https://github.com/940329540aaa-ui/grok-bot-squad">查看 GitHub 仓库</a><a class="btn g" href="https://github.com/940329540aaa-ui/grok-bot-squad/blob/main/logs/2026-10-10.md">搭建日志</a>
+<div class="stats"><div class="stat"><b>5</b><span>协作 Bot</span></div><div class="stat"><b>1</b><span>对话入口</span></div><div class="stat"><b>0</b><span>人工传话</span></div><div class="stat"><b>4</b><span>真实案例</span></div></div>
+</div></header>
+<main class="wrap">
+<h2>🧩 团队成员</h2><div class="grid">
+<div class="card"><h3>🧭 YOYO 总管</h3><p>唯一入口：拆任务、派活、验收、汇报。新建与不可逆操作先问我。</p></div>
+<div class="card"><h3>🛰️ AI 侦察员</h3><p>搜集 X / GitHub / B 站 / YouTube 的 AI 动态，只读不写。</p></div>
+<div class="card"><h3>🎮 玩法教练</h3><p>搜罗社区玩法，按实际条件过滤成可落地的步骤。</p></div>
+<div class="card"><h3>🔬 研究猿</h3><p>点名才开工，追一手来源，写结论先行、带出处的短报。</p></div>
+<div class="card"><h3>📚 学习官</h3><p>一问一答带我学透一个领域，沉淀成学习卡片。</p></div></div>
+<h2>🗺️ 架构</h2><div class="arch"><img src="architecture.png" alt="团队架构图"></div>
+<h2>📐 设计原则</h2><div class="grid">
+<div class="card"><h3>单一入口</h3><p>人只跟总管说话，不用记谁负责什么。</p></div>
+<div class="card"><h3>职责卡</h3><p>只干什么 / 坚决不干什么 / 交付标准，Bot 之间不抢活。</p></div>
+<div class="card"><h3>不当传话筒</h3><p>Bot 之间直接同步，做完统一汇报。</p></div>
+<div class="card"><h3>交付物落盘</h3><p>长内容存文件，对话只放结论和链接。</p></div>
+<div class="card"><h3>人在关键节点拍板</h3><p>新建、发信、删除、付费、发布，必须我同意。</p></div>
+<div class="card"><h3>省额度铁律</h3><p>定时任务每天 ≤2 次，命令行优先，派活一次说清。</p></div></div>
+<h2>🧪 真实案例</h2><div class="grid">
+<div class="card"><h3>① Bot 圆桌会：要不要付费？</h3><p>玩法教练论证价值，研究猿核实事实，总管裁决：先不付，看 3 个信号——</p><ol><li class="sig">有定时任务结果我每天真的会看</li><li class="sig">Bot 直接派活省掉 ≥3 次转发</li><li class="sig">日额度用量约 ≤10%</li></ol></div>
+<div class="card"><h3>② 浏览器挂了，命令行绕行</h3><p>浏览器网络通道不稳定，改用命令行抓 GitHub Trending，再用 Python 画图，照样交付。</p></div>
+<div class="card"><h3>③ 借鉴社区，再做减法</h3><p>参考 12 个 Bot 的「内容军团」，只取研究猿和学习官；少开 Bot，多装技能。</p></div>
+<div class="card"><h3>④ 踩坑与反思</h3><p>平台风控、API 付费、浏览器不稳；总管自作主张做了没人要的网站 → 定下「新建先问」规则。</p></div></div>
+<h2>🚀 下一步</h2><div class="card"><ol><li>邮件派活入口：手机发邮件，总管拆分派活、回汇总</li><li>接力审稿 + 额度账本：第 7 天出「哪些活值得付费」报告</li><li>微信接入：待安全审查</li></ol></div>
+</main>
+<footer>⚡ Built with Grok Bot · by Frank · <a href="https://github.com/940329540aaa-ui/grok-bot-squad">GitHub</a></footer>
+</body></html>
